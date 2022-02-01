@@ -1,0 +1,250 @@
+/* start global rules  */
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  ul {
+    list-style: none;
+  }
+  a {
+    text-decoration: none;
+  }
+  body{
+    background-size: cover;
+    background-position:center ;
+}
+  .container {
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  /* small screens */
+  @media (min-width: 768px) {
+    .container {
+      width: 750px;
+    }
+  }
+  /* meduim screens */
+  @media (min-width: 992px) {
+    .container {
+      width: 970px;
+    }
+  }
+  /* large screens */
+  @media (min-width: 1200px) {
+    .container {
+      width: 1170px;
+    }
+  }
+  ::-webkit-scrollbar {
+    width: 0.7rem;
+   }
+  
+  ::-webkit-scrollbar-track {
+
+    background:rgb(216, 216, 216);
+    }
+  
+  ::-webkit-scrollbar-thumb {
+    background:rgb(190, 189, 189);
+    border-radius: 1rem;
+    transition: .5s;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background:rgb(109, 109, 109);
+  }
+  
+  /* for Firefox */
+   html {scrollbar-color: #3a3a3a #acacac;}
+  /* end global rules */
+.default{
+background-image: url(backgrounds/defaut.jpg);
+}
+.b1{
+  background: url(backgrounds/b1.jpg);
+  background-size: cover;
+  background-position:center ;
+}
+.b2{
+  background: url(backgrounds/b2.jpg);
+  background-size: cover;
+  background-position:center ;
+}
+/* start main */
+main{
+    /* min-height: 100vh; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin:0 auto;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    width: 35%;
+}
+@media (max-width:991px){
+  main{
+    width: 50%;
+  }
+}
+@media (max-width:767px){
+  main{
+    width: 100%;
+  }
+}
+@media (min-width:768px){
+  main{
+    border-radius: 30px;
+  }
+}
+main .container{
+    text-align: center;
+}
+.maindefault{
+  background: linear-gradient(to top,#3334354d,#b6fbffbf);
+}
+.main2{
+    background: linear-gradient(to top,#43c6ac93,#f9fcd7a9);
+   
+}
+.main1{
+    background: linear-gradient(to bottom,#b20a2c80,#fffbd580);
+}
+/* start main-header */
+.main-header{
+  margin-bottom: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.main-header .logo{
+ width:120px;
+}
+
+.main-header h2{
+    color:rgb(20 39 82);
+ font-size: 30px;
+ margin-top: 15px;
+ font-family: cursive;
+}
+.main-header p{
+ font-size: 20px;
+ font-family: cursive;
+ font-weight: 600;
+ margin-top: 25px;
+}
+/* end main header */
+/* start content-audio */
+.content-audio{
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+/* start buttons */
+.content-audio .buttons{
+  display: flex;
+    justify-content: space-between;
+    width: 180px;
+    min-width: 180px;
+    margin: 0 auto;
+    align-items: center;
+}
+.content-audio .buttons i{
+  cursor: pointer;
+  font-size: 25px;
+  transition: .5s;
+}
+.content-audio .buttons i:hover{
+  color: rgb(216, 105, 123);
+}
+.bi-pause-circle-fill{
+  display: none;
+  
+}
+.playnone{
+  display: none;
+}
+.pauseblock{
+  display:inline-block;
+  
+}
+/* end buttons */
+/* start range */
+.content-audio .range{
+  margin: 37.9px 0;
+}
+.content-audio .range h2{
+  font-size: 20px;
+  font-family: cursive;
+}
+.content-audio .range input[type="range"] {
+  -webkit-appearance: none;
+  height:3px;
+  width:200px;
+  background: rgb(41, 50, 51);
+  margin: 37.9px 0;
+}
+.content-audio .range input[type="range"]::-webkit-slider-thumb{
+-webkit-appearance: none;
+appearance: none;
+width: 22px;
+height: 22px;
+border-radius: 50%; 
+cursor: pointer;
+background: linear-gradient(45deg,rgb(163, 218, 255),rgb(17, 54, 102));
+box-shadow:  0 0 6px rgb(15, 37, 107);
+transition: .5s;
+}
+.content-audio .range input[type="range"]::-webkit-slider-thumb:hover{
+  background: linear-gradient(180deg,pink,rgb(216, 105, 123));
+  box-shadow:  0 0 6px rgb(95, 18, 31);
+}
+/* end range */
+/* start theme */
+.content-audio .theme{
+  display: flex;
+  width: 200px;
+  margin: 0 auto;
+}
+.content-audio .theme .btn{
+  all: unset;
+  height:20px;
+  width:20px;
+  border-radius: 50%;
+  margin:5px;
+  cursor: pointer;
+  transition: 0.4s;
+  
+}
+.content-audio .theme .btn:hover{
+  box-shadow: 0 0 20px lightblue;
+  transform: scale(1.06);
+}
+.content-audio .theme #btn1{
+background: linear-gradient(45deg,#1c92d2,#f2fcfe);
+}
+.content-audio .theme #btn2{
+  background: linear-gradient(45deg,#D66D75,#FFAFBD);
+}
+/* end theme */
+/* end content-audio */
+/* end main */
+/* start footer */
+footer{
+  text-align: center;
+  padding: 20px;
+  color: white;
+  font-size: 17px;
+  font-family: cursive;
+  background-color: #3334354d;
+}
+footer a{
+  color: #ffffff;
+  transition: .5s;
+}
+footer a:hover{
+  color: #d12b60;
+}
+/* end footer */
