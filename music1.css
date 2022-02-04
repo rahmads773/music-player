@@ -13,7 +13,8 @@
     text-decoration: none;
   }
   body{
-    font-family: 'Noto Sans', sans-serif;
+    min-height: 100vh;
+    font-family: 'Comfortaa', cursive;
 }
   .container {
     margin-right: auto;
@@ -105,18 +106,23 @@ main .container{
   padding-bottom: 10px;
 }
 .main-header .logo{
- width:120px;
+ width:110px;
+ border-radius: 15px;
 }
 
 .main-header h2{
     color:rgb(20 39 82);
  font-size: 30px;
- margin-top: 15px;
+ margin-top: 30px;
+ font-weight: bold;
 }
 .main-header p{
- font-size: 20px;
+ font-size: 22px;
  font-weight: 600;
  margin-top: 25px;
+ font-style: italic;
+    letter-spacing: 2px;
+    color: #d12b60;
 }
 /* end main header */
 /* start content-audio */
@@ -132,14 +138,15 @@ main .container{
     min-width: 180px;
     margin: 0 auto;
     align-items: center;
+    color: #222;
 }
 .content-audio .buttons i{
   cursor: pointer;
-  font-size: 25px;
+  font-size: 28px;
   transition: .5s;
 }
 .content-audio .buttons i:hover,.content-audio .buttons i:focus{
-  color: rgb(216, 105, 123);
+  color: #d12b60;
 }
 .bi-pause-circle-fill{
   display: none;
@@ -159,14 +166,16 @@ main .container{
 }
 .content-audio .range h2{
   font-size: 20px;
+  color: #333;
 }
 .content-audio .range input[type="range"] {
   -webkit-appearance: none;
-  height:3px;
-  width:200px;
-  background: rgb(41, 50, 51);
+  height: 2px;
+  width: 200px;
+  background: rgb(45 49 49 / 84%);
   margin: 37.9px 0;
 }
+
 .content-audio .range input[type="range"]::-webkit-slider-thumb{
 -webkit-appearance: none;
 appearance: none;
@@ -197,17 +206,37 @@ transition: .5s;
   margin:5px;
   cursor: pointer;
   transition: 0.4s;
-  
 }
 .content-audio .theme .btn:hover{
-  box-shadow: 0 0 20px lightblue;
+  box-shadow: 0 0 10px rgba(70, 72, 73, 0.589);
   transform: scale(1.06);
 }
 .content-audio .theme #btn1{
 background: linear-gradient(45deg,#1c92d2,#f2fcfe);
+animation: move-btn-up 2.5s infinite linear;
 }
 .content-audio .theme #btn2{
   background: linear-gradient(45deg,#D66D75,#FFAFBD);
+  animation: move-btn-down 2.5s infinite linear;
+}
+.content-audio .theme #btn1:hover,.content-audio .theme #btn2:hover{
+  animation-play-state: paused;
+}
+@keyframes move-btn-up {
+  0%,100%{
+    transform: translateY(0);
+  }
+  50%{
+    transform: translateY(-20px);
+  }
+}
+@keyframes move-btn-down {
+  0%,100%{
+    transform: translateY(-20px);
+  }
+  50%{
+    transform: translateY(0);
+  }
 }
 /* end theme */
 /* end content-audio */
@@ -215,7 +244,7 @@ background: linear-gradient(45deg,#1c92d2,#f2fcfe);
 /* start footer */
 footer{
   text-align: center;
-  padding: 20px;
+  padding: 30px;
   color: rgb(0, 0, 0);
   font-size: 17px;
 }
